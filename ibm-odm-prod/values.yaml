@@ -96,7 +96,7 @@ internalDatabase:
   persistence:
     enabled: true
     useDynamicProvisioning: true
-    storageClassName: "ocs-storagecluster-cephfsmirror"
+    storageClassName: "ocs-storagecluster-ceph-rbdmirror"
     resources:
       requests:
         storage: 5Gi
