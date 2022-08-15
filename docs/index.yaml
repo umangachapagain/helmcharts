@@ -3,7 +3,7 @@ entries:
   example:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-08-12T00:33:03.377295-05:00"
+    created: "2022-08-15T13:33:06.632936-05:00"
     description: A Helm chart for Kubernetes
     digest: ba044bb5b5a532da69581764c40a5474303a877448645f676d4eef26ebefe1c7
     name: example
@@ -11,10 +11,29 @@ entries:
     urls:
     - example-0.1.0.tgz
     version: 0.1.0
+  ibm-mq:
+  - apiVersion: v2
+    appVersion: 9.3.0.0
+    created: "2022-08-15T13:33:06.634424-05:00"
+    description: IBM MQ queue manager
+    digest: e6c3d7efceb5f69d6cf5fc4897ff09c22abf77292e48046c17fd00bf074b6684
+    icon: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-mq-blue-icon.png
+    keywords:
+    - IBM MQ
+    - MQ
+    - amd64
+    - message queue
+    - Integration
+    kubeVersion: '>=1.18.0-0'
+    name: ibm-mq
+    type: application
+    urls:
+    - ibm-mq-3.0.0.tgz
+    version: 3.0.0
   ibm-odm-prod:
   - apiVersion: v1
     appVersion: 8.10.5.0
-    created: "2022-08-12T00:33:03.380578-05:00"
+    created: "2022-08-15T13:33:06.637547-05:00"
     description: IBM Operational Decision Manager
     digest: 3714f213c62346941d9548bfdbbc7a007265a81118da3e7b8cf991f860ec730c
     home: https://developer.ibm.com/odm/
@@ -37,4 +56,4 @@ entries:
     urls:
     - ibm-odm-prod-20.3.0.tgz
     version: 20.3.0
-generated: "2022-08-12T00:33:03.376137-05:00"
+generated: "2022-08-15T13:33:06.631634-05:00"
