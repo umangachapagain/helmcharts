@@ -70,12 +70,10 @@ spec:
       - name: init-db-pvc
 	      image: alpine
 	      command: ['sh', '-c', "chown -R postgres:postgres /var/lib/pgsql/data"]
-	      {{- if .Values.internalDatabase.persistence.enabled }}
         volumeMounts:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
             subPath : data
-        {{- end }}
       containers:
       - name: {{ template "odm.dbserver.fullname" . }}
 {{ include "image.tagOrDigest" (dict "containerName" "dbserver" "containerTag" .Values.internalDatabase.tagOrDigest "root" .) | indent 8  }}
