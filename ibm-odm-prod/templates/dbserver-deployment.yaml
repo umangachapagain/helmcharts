@@ -66,6 +66,7 @@ spec:
         persistentVolumeClaim:
           claimName: {{ template "odm.persistenceclaim.fullname" . }}
       {{- end }}
+      {{- if .Values.internalDatabase.persistence.enabled }}
       initContainers:
       - name: init-db-pvc
 	      image: alpine
@@ -74,10 +75,10 @@ spec:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
             subPath : data
+      {{- end }}
       containers:
       - name: {{ template "odm.dbserver.fullname" . }}
 {{ include "image.tagOrDigest" (dict "containerName" "dbserver" "containerTag" .Values.internalDatabase.tagOrDigest "root" .) | indent 8  }}
-##        image: {{ template "odm.repository.name" . }}/dbserver:{{ .Values.image.tag }}{{ template "platform" . }}
         securityContext:
           runAsUser: {{ .Values.internalDatabase.runAsUser }}
           runAsNonRoot: true
