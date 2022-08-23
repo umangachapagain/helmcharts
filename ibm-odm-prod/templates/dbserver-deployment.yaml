@@ -65,16 +65,14 @@ spec:
       - name: {{ template "fullname" . }}-volume
         persistentVolumeClaim:
           claimName: {{ template "odm.persistenceclaim.fullname" . }}
-      {{- end }}
-      {{- if .Values.internalDatabase.persistence.enabled }}
       initContainers:
       - name: init-db-pvc
-	      image: alpine
-	      command: ['sh', '-c', "chown -R postgres:postgres /var/lib/pgsql/data"]
+        image: alpine
+        command: ['sh', '-c', 'chown -R postgres:postgres /var/lib/pgsql/data']
         volumeMounts:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
-            subPath : data
+            subPath: data
       {{- end }}
       containers:
       - name: {{ template "odm.dbserver.fullname" . }}
