@@ -74,7 +74,7 @@ spec:
             mountPath: /var/lib/pgsql/
             subPath: data
         securityContext:
-          runAsUser: root
+          runAsUser: 0
       {{- end }}
       containers:
       - name: {{ template "odm.dbserver.fullname" . }}
