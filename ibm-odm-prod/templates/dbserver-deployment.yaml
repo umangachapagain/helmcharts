@@ -73,6 +73,8 @@ spec:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
             subPath: data
+        securityContext:
+          runAsUser: root
       {{- end }}
       containers:
       - name: {{ template "odm.dbserver.fullname" . }}
