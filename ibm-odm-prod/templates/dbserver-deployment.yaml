@@ -67,9 +67,9 @@ spec:
           claimName: {{ template "odm.persistenceclaim.fullname" . }}
       initContainers:
       - name: init-db-pvc
-        image: alpine
+        image: redhat/ubi8
         # command: ['sh', '-c', 'rm /var/lib/pgsql/data/server.key']
-        command: ['sh', '-c', 'adduser postgres -D', 'addgroup postgres', 'chown -R postgres:postgres /var/lib/pgsql/data', 'chmod -R 0600 /var/lib/pgsql/data']
+        command: ['sh', '-c', 'useradd postgres -U', 'chown -R postgres:postgres /var/lib/pgsql/data', 'chmod -R 0600 /var/lib/pgsql/data']
         volumeMounts:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
