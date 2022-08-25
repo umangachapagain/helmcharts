@@ -69,7 +69,7 @@ spec:
       - name: init-db-pvc
         image: redhat/ubi8
         # command: ['sh', '-c', 'rm /var/lib/pgsql/data/server.key']
-        command: ['sh', '-c', 'groupadd -g 26 postgres', 'useradd postgres -u 26 -g 26 -c "PostgreSQL Server" -d /var/lib/pgsql -s /bin/bash', 'chown -R postgres:postgres /var/lib/pgsql/data', 'chmod -R 0600 /var/lib/pgsql/data']
+        command: ['sh', '-c', 'groupadd -g 26 postgres', 'useradd postgres -u 26 -g 26 -c "PostgreSQL Server" -d /var/lib/pgsql -s /bin/bash', 'sudo chown -R postgres:postgres /var/lib/pgsql/data', 'sudo chmod -R 0600 /var/lib/pgsql/data']
         volumeMounts:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
