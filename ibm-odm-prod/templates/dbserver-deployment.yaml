@@ -68,7 +68,8 @@ spec:
       initContainers:
       - name: init-db-pvc
         image: alpine
-        command: ['sh', '-c', 'chown -R root:root /var/lib/pgsql/data', 'chmod -R 0640 /var/lib/pgsql/data']
+        # command: ['sh', '-c', 'rm /var/lib/pgsql/data/server.key']
+        command: ['sh', '-c', 'adduser postgres -D', 'addgroup postgres', 'chown -R postgres:postgres /var/lib/pgsql/data', 'chmod -R 0600 /var/lib/pgsql/data']
         volumeMounts:
           - name: {{ template "fullname" . }}-volume
             mountPath: /var/lib/pgsql/
