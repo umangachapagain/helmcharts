@@ -143,7 +143,7 @@ startupProbe:
 route:
   nodePort:
     webconsole: false
-    mqtraffic: false
+    mqtraffic: true
   openShiftRoute:
     webconsole: true
     mqtraffic: true
