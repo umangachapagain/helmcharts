@@ -44,9 +44,9 @@ persistence:
     # name sets part of the name for this Persistent Volume Claim
     name: "data"
     ## size is the minimum size of the Persistent Volume
-    size: 2Gi
+    size: 5Gi
     ## storageClass to use for this PVCs
-    storageClassName: "ocs-storagecluster-ceph-rbd"
+    storageClassName: "ocs-external-storagecluster-ceph-rbd"
 
   # logPVC section specifies settings for the main Persistent Volume Claim, which is used for log in /mnt/mqm-log
   logPVC:
@@ -55,9 +55,9 @@ persistence:
     # name sets part of the name for this Persistent Volume Claim
     name: "log"
     ## size is the minimum size of the Persistent Volume
-    size: 2Gi
+    size: 5Gi
     ## storageClass to use for this PVCs
-    storageClassName: "ocs-storagecluster-ceph-rbd"
+    storageClassName: "ocs-external-storagecluster-ceph-rbd"
 
   # dataPVC section specifies settings for the main Persistent Volume Claim, which is used for data in /mnt/mqm-data
   qmPVC:
@@ -66,9 +66,9 @@ persistence:
     # name sets part of the name for this Persistent Volume Claim
     name: "qm"
     ## size is the minimum size of the Persistent Volume
-    size: 2Gi
+    size: 5Gi
     ## storageClass to use for this PVCs
-    storageClassName: "ocs-storagecluster-ceph-rbd"
+    storageClassName: "ocs-external-storagecluster-ceph-rbd"
 
 
 resources:
