@@ -3,18 +3,18 @@ entries:
   example:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-24T12:12:41.255075-08:00"
+    created: "2023-02-24T12:27:46.434227-08:00"
     description: A Helm chart for Kubernetes
     digest: ba044bb5b5a532da69581764c40a5474303a877448645f676d4eef26ebefe1c7
     name: example
     type: application
     urls:
-    - https://https:/netzzer.github.io/helmcharts/docs/example-0.1.0.tgz
+    - https://netzzer.github.io/helmcharts/docs/example-0.1.0.tgz
     version: 0.1.0
   ibm-mq:
   - apiVersion: v2
     appVersion: 9.3.0.0
-    created: "2023-02-24T12:12:41.253028-08:00"
+    created: "2023-02-24T12:27:46.433176-08:00"
     description: IBM MQ queue manager
     digest: d7341d30409dd02cebe939e2d173581d3cdfd8d527cd07430e34fcade116ed43
     icon: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-mq-blue-icon.png
@@ -28,11 +28,11 @@ entries:
     name: ibm-mq
     type: application
     urls:
-    - https://https:/netzzer.github.io/helmcharts/ibm-mq-3.0.0.tgz
+    - https://netzzer.github.io/helmcharts/ibm-mq-3.0.0.tgz
     version: 3.0.0
   - apiVersion: v2
     appVersion: 9.3.0.0
-    created: "2023-02-24T12:12:41.257604-08:00"
+    created: "2023-02-24T12:27:46.436298-08:00"
     description: IBM MQ queue manager
     digest: a04c1400b7c8a423c4dec611ccff2990b152c3ae0ddd8aef5dd1c8ae1922f8c2
     icon: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-mq-blue-icon.png
@@ -46,12 +46,12 @@ entries:
     name: ibm-mq
     type: application
     urls:
-    - https://https:/netzzer.github.io/helmcharts/docs/ibm-mq-3.0.0.tgz
+    - https://netzzer.github.io/helmcharts/docs/ibm-mq-3.0.0.tgz
     version: 3.0.0
   ibm-odm-prod:
   - apiVersion: v1
     appVersion: 8.10.5.0
-    created: "2023-02-24T12:12:41.261259-08:00"
+    created: "2023-02-24T12:27:46.439306-08:00"
     description: IBM Operational Decision Manager
     digest: f84573e3b72e7fa77dbebaef140ed425ff332eaad7cddf2341ceed38df59eb91
     home: https://developer.ibm.com/odm/
@@ -72,6 +72,6 @@ entries:
     sources:
     - https://github.com/IBM/charts/tree/master/stable
     urls:
-    - https://https:/netzzer.github.io/helmcharts/docs/ibm-odm-prod-20.3.0.tgz
+    - https://netzzer.github.io/helmcharts/docs/ibm-odm-prod-20.3.0.tgz
     version: 20.3.0
-generated: "2023-02-24T12:12:41.251732-08:00"
+generated: "2023-02-24T12:27:46.42922-08:00"
