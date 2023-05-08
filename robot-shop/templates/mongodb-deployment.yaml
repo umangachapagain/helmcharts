@@ -23,6 +23,9 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: 27017
+        volumeMounts:
+        - name: mongodb-persistent-storage
+          mountPath: /data/db
         resources:
           limits:
             cpu: 200m
@@ -30,6 +33,10 @@ spec:
           requests:
             cpu: 100m
             memory: 100Mi
+      volumes:
+      - name: mongodb-persistent-storage
+        persistentVolumeClaim:
+          claimName: mongodb-pv-claim
       restartPolicy: Always
       {{- with .Values.mongodb.affinity }}
       affinity:

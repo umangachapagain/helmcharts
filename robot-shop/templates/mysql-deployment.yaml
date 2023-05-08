@@ -27,6 +27,9 @@ spec:
             add: ["NET_ADMIN"]
         ports:
         - containerPort: 3306
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /data
         resources:
           limits:
             cpu: 200m
@@ -34,6 +37,10 @@ spec:
           requests:
             cpu: 100m
             memory: 700Mi
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
       restartPolicy: Always
       {{- with .Values.mysql.affinity }}
       affinity:

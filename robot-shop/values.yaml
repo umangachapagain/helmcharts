@@ -39,9 +39,15 @@ catalogue: {}
 
 dispatch: {}
 
-mongodb: {}
+mongodb:
+  # Storage class and size to use with mongodb PVC
+  storageClassName: ocs-storagecluster-ceph-rbd
+  storage: 1Gi
 
-mysql: {}
+mysql:
+  # Storage class and size to use with mysql PVC
+  storageClassName: ocs-storagecluster-ceph-rbd
+  storage: 1Gi
 
 payment:
   # Alternative payment gateway URL
@@ -54,8 +60,9 @@ rabbitmq: {}
 ratings: {}
 
 redis:
-  # Storage class to use with redis statefulset.
+  # Storage class and size to use with redis PVC
   storageClassName: ocs-storagecluster-ceph-rbd
+  storage: 1Gi
 
 shipping: {}
 
