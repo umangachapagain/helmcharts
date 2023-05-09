@@ -24,9 +24,9 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: 6379
-        volumeMounts:
-          - name: data
-            mountPath: /mnt/redis
+#        volumeMounts:
+#          - name: data
+#            mountPath: /mnt/redis
         resources:
           limits:
             cpu: 200m
@@ -47,13 +47,13 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-  volumeClaimTemplates:
-    - metadata:
-        name: data
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        storageClassName: {{ .Values.redis.storageClassName }}
-        volumeMode: Filesystem
-        resources:
-          requests:
-            storage: {{ .Values.redis.storage }}
+#  volumeClaimTemplates:
+#    - metadata:
+#        name: data
+#      spec:
+#        accessModes: [ "ReadWriteOnce" ]
+#        storageClassName: {{ .Values.redis.storageClassName }}
+#        volumeMode: Filesystem
+#        resources:
+#          requests:
+#            storage: {{ .Values.redis.storage }}
