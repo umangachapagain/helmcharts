@@ -10,5 +10,5 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: robot-shop
-  namespace: robot-shop
+  namespace: {{ .Release.Namespace }}
 {{ end }}
