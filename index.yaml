@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  robot-shop:
+  - apiVersion: v1
+    created: "2024-05-13T17:35:25.277854717+05:30"
+    description: Sample micoservices application
+    digest: 6c8a0e2ce65cd1a5ba2364bb8096e0c256b7833036b449c1572fc54d18960669
+    home: https://github.com/umangachapagain/robot-shop
+    name: robot-shop
+    urls:
+    - robot-shop-1.7.0.tgz
+    version: 1.7.0
+generated: "2024-05-13T17:35:25.277385993+05:30"
