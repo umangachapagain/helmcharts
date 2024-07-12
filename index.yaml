@@ -1,8 +1,18 @@
 apiVersion: v1
 entries:
+  busybox:
+  - apiVersion: v2
+    created: "2024-07-12T21:49:40.499152259+05:30"
+    description: Busybox application
+    digest: 7096d879c6defba5db27000acebf15a42da8c51efdb95cf3a5f7d6c4132b018d
+    name: busybox
+    type: application
+    urls:
+    - busybox-0.1.0.tgz
+    version: 0.1.0
   robot-shop:
   - apiVersion: v1
-    created: "2024-07-12T21:12:30.713533298+05:30"
+    created: "2024-07-12T21:49:40.499556419+05:30"
     description: Sample micoservices application
     digest: 93ccbfda441ea98b65c53ba97e7404bc8543ba38637f322af8fa0cdb5235042d
     home: https://github.com/umangachapagain/robot-shop
@@ -12,7 +22,7 @@ entries:
     version: 1.7.1
   robot-shop-scale:
   - apiVersion: v1
-    created: "2024-07-12T21:12:30.71383693+05:30"
+    created: "2024-07-12T21:49:40.499908772+05:30"
     description: Sample micoservices application
     digest: f58e0e0dca17e83dc58960e1f71686a8e0c85186b5ab67497cbcc2819d87d536
     home: https://github.com/umangachapagain/robot-shop
@@ -20,4 +30,4 @@ entries:
     urls:
     - robot-shop-scale-2.tgz
     version: "2"
-generated: "2024-07-12T21:12:30.712980177+05:30"
+generated: "2024-07-12T21:49:40.498907037+05:30"
